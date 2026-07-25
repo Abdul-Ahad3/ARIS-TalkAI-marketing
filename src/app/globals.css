@@ -1,26 +1,161 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ==========================================================================
+   DESIGN TOKENS — Tailwind v4 CSS-first config.
+   This @theme block is the design system.
+   Every value here becomes a real utility class automatically (bg-teal-500,
+   rounded-xl, text-display, shadow-premium, ease-premium, ...) and a real
+   CSS custom property usable outside Tailwind too (var(--color-teal-500)).
+   ========================================================================== */
+@theme {
+  /* ---- Color ---- */
+  --color-surface: #ffffff;       /* primary background */
+  --color-surface-soft: #f7f8f8;  /* section alternation, cards */
+  --color-surface-muted: #eef1f1; /* recessed surfaces, inputs */
+
+  --color-ink: #0b0d0e;      /* primary text — near-black, not pure #000 */
+  --color-ink-soft: #4b5257; /* secondary text */
+  --color-ink-muted: #8b9296; /* captions, tertiary text */
+
+  --color-line: #e4e7e7; /* hairline dividers, card borders */
+
+  /* Brand teal — TODO: confirm --color-teal-500 against the real app hex.
+     Every other step is a manually-tuned scale around that one value. */
+  --color-teal-50: #eefbf9;
+  --color-teal-100: #d3f3ee;
+  --color-teal-200: #a7e7dd;
+  --color-teal-300: #6fd5c6;
+  --color-teal-400: #39c1ac;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0e9484;
+  --color-teal-700: #0c776a;
+  --color-teal-800: #0a5f55;
+  --color-teal-900: #083f39;
+
+  /* ---- Radius — soft, rounded, matches the existing app's card language ---- */
+  --radius-sm: 0.5rem;   /* 8px  — inputs, small controls */
+  --radius-md: 0.75rem;  /* 12px — compact cards, tags */
+  --radius-lg: 1rem;     /* 16px — standard cards */
+  --radius-xl: 1.25rem;  /* 20px — feature cards */
+  --radius-2xl: 1.75rem; /* 28px — large media cards, modals */
+  --radius-3xl: 2.25rem; /* 36px — hero-level containers */
+
+  /* ---- Typography — fluid, semantic sizes. Paired line-height / tracking /
+     weight use Tailwind v4's suffixed theme keys, so `text-display` alone
+     carries its full type treatment — no extra classes needed at call sites. ---- */
+  --text-display: clamp(2.5rem, 5.5vw + 1rem, 6.25rem); /* Hero headline */
+  --text-display--line-height: 1.02;
+  --text-display--letter-spacing: -0.03em;
+  --text-display--font-weight: 500;
+
+  --text-title: clamp(1.875rem, 2.5vw + 1rem, 3.25rem); /* Section headings */
+  --text-title--line-height: 1.08;
+  --text-title--letter-spacing: -0.02em;
+  --text-title--font-weight: 500;
+
+  --text-eyebrow: 0.8125rem; /* Section labels, set in font-mono uppercase */
+  --text-eyebrow--line-height: 1.4;
+  --text-eyebrow--letter-spacing: 0.08em;
+  --text-eyebrow--font-weight: 600;
+
+  /* ---- Spacing rhythm — the token that keeps every homepage section's
+     vertical padding identical. Registering it under --spacing-* means
+     `py-section` is a real, native-feeling utility, not a bolted-on class. ---- */
+  --spacing-section: clamp(4rem, 8vw, 8rem);    /* ~64px mobile → 128px desktop */
+  --spacing-section-sm: clamp(3rem, 5vw, 5rem); /* tighter rhythm, nested/sub-sections */
+
+  /* ---- Container widths — plain vars for now; see caveat above re: v4's
+     max-width namespace. Consumed via arbitrary value syntax until Container.tsx
+     is built and we confirm the cleanest utility-class form. ---- */
+  --width-narrow: 45rem;  /* 720px — prose, forms, single-column copy */
+  --width-content: 80rem; /* 1280px — standard section width */
+
+  /* ---- Shadows — two-layer system: neutral ambient (resting) vs
+     teal-tinted glow (hover/feature emphasis). Never a flat drop-shadow. ---- */
+  --shadow-card: 0 2px 12px -4px rgb(11 13 14 / 0.08);
+  --shadow-premium:
+    0 24px 64px -20px rgb(8 63 57 / 0.22),
+    0 0 0 1px rgb(20 184 166 / 0.05);
+
+  /* ---- Motion — signature ease for all reveal/hover transitions ---- */
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* `inline` because these values reference CSS variables next/font already
+   injects on <html> (--font-display, --font-sans, --font-mono). A plain
+   @theme block would redeclare the same variable names and collide with
+   next/font's own declaration; `inline` substitutes the value directly at
+   each utility's use site instead, so it correctly reads next/font's value. */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display), sans-serif;
+  --font-sans: var(--font-sans), sans-serif;
+  --font-mono: var(--font-mono), monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #d98826;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-ink font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+
+  /* Visible keyboard focus everywhere — accessibility floor, non-negotiable */
+  :focus-visible {
+    @apply outline-none ring-2 ring-teal-500 ring-offset-2 ring-offset-surface rounded-md;
+  }
+
+  ::selection {
+    @apply bg-teal-200 text-ink;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ==========================================================================
+   CUSTOM UTILITIES
+   @utility (not @layer utilities) so these get full Tailwind variant support
+   (hover:glass, md:text-balance, etc.) for free. Kept deliberately short —
+   everything else should stay native Tailwind utility composition.
+   ========================================================================== */
+@utility glass {
+  background-color: color-mix(in oklab, var(--color-surface) 80%, transparent);
+  backdrop-filter: blur(12px);
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+/* Sparingly-used emphasis treatment for a single keyword inside a headline
+   (e.g. "Anywhere" in "Communicate Anywhere") — not for full sentences. */
+@utility text-gradient-teal {
+  background-image: linear-gradient(90deg, var(--color-teal-600), var(--color-teal-400));
+  background-clip: text;
+  color: transparent;
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   Root-level kill switch — scroll storytelling degrades to simple opacity
+   fades, no parallax/pinned scroll, for anyone with this preference set.
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
