@@ -7,6 +7,8 @@ import { Solution } from "@/components/sections/Solution";
 import { Ecosystem } from "@/components/sections/Ecosystem";
 import { Features } from "@/components/sections/Features";
 import { Industries } from "@/components/sections/Industries";
+import { TechnologyPreview } from "@/components/sections/TechPreview";
+import { CTA } from "@/components/sections/CTA";
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
       <Ecosystem />
       <Features />
       <Industries />
+      <TechnologyPreview />
+      <CTA />
       <Footer />
     </>
   );
