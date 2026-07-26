@@ -6,6 +6,7 @@ import { Problem } from "@/components/sections/Problem";
 import { Solution } from "@/components/sections/Solution";
 import { Ecosystem } from "@/components/sections/Ecosystem";
 import { Features } from "@/components/sections/Features";
+import { Industries } from "@/components/sections/Industries";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Solution />
       <Ecosystem />
       <Features />
+      <Industries />
       <Footer />
     </>
   );
