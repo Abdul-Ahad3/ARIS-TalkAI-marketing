@@ -6,6 +6,7 @@ import { ContinuousListening } from "@/components/sections/embedded/ContListenin
 import { HardwareSpecs } from "@/components/sections/embedded/HardwareSpecs";
 import { EnterpriseApplications } from "@/components/sections/embedded/EnterpriseApps";
 import { CTA } from "@/components/sections/embedded/CTA";
+import { Footer } from "@/components/layout/Footer";
 
 export default function EmbeddedPage() {
   return (
@@ -18,6 +19,7 @@ export default function EmbeddedPage() {
       <HardwareSpecs />
       <EnterpriseApplications />
       <CTA />
+      <Footer />
     </>
   );
 }
