@@ -45,7 +45,7 @@ export function NavBar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-colors duration-300 ease-premium",
+        "fixed inset-x-0 top-0 z-50 transition-colors bg-white duration-300 ease-premium",
         isScrolled || isMenuOpen
           ? "glass border-b border-line"
           : "border-b border-transparent"

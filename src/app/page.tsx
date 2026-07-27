@@ -1,14 +1,14 @@
 import Image from "next/image";
-import { Hero } from "@/components/sections/Hero";
+import { Hero } from "@/components/sections/home/Hero";
 import { NavBar } from "@/components/layout/NavBar"
 import { Footer } from "@/components/layout/Footer";
-import { Problem } from "@/components/sections/Problem";
-import { Solution } from "@/components/sections/Solution";
-import { Ecosystem } from "@/components/sections/Ecosystem";
-import { Features } from "@/components/sections/Features";
-import { Industries } from "@/components/sections/Industries";
-import { TechnologyPreview } from "@/components/sections/TechPreview";
-import { CTA } from "@/components/sections/CTA";
+import { Problem } from "@/components/sections/home/Problem";
+import { Solution } from "@/components/sections/home/Solution";
+import { Ecosystem } from "@/components/sections/home/Ecosystem";
+import { Features } from "@/components/sections/home/Features";
+import { Industries } from "@/components/sections/home/Industries";
+import { TechnologyPreview } from "@/components/sections/home/TechPreview";
+import { CTA } from "@/components/sections/home/CTA";
 
 export default function Home() {
   return (
