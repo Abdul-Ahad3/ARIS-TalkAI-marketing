@@ -51,7 +51,7 @@ export function NavBar() {
           : "border-b border-transparent"
       )}
     >
-      <Container className="grid h-20 grid-cols-3 items-center">
+      <Container className="grid h-20 grid-cols-[auto_1fr_auto] items-center">
         <Link href="/" aria-label="ARIS TalkAI home">
           <Logo />
         </Link>
