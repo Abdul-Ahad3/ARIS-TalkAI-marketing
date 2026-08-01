@@ -33,22 +33,22 @@
   --color-teal-900: #083f39;
 
   /* ---- Radius — soft, rounded, matches the existing app's card language ---- */
-  --radius-sm: 0.5rem;   /* 8px  — inputs, small controls */
-  --radius-md: 0.75rem;  /* 12px — compact cards, tags */
-  --radius-lg: 1rem;     /* 16px — standard cards */
-  --radius-xl: 1.25rem;  /* 20px — feature cards */
-  --radius-2xl: 1.75rem; /* 28px — large media cards, modals */
-  --radius-3xl: 2.25rem; /* 36px — hero-level containers */
+  --radius-sm: 0.1rem;   /* 8px  — inputs, small controls */
+  --radius-md: 0.35rem;  /* 12px — compact cards, tags */
+  --radius-lg: 0.6rem;     /* 16px — standard cards */
+  --radius-xl: 1.05rem;  /* 20px — feature cards */
+  --radius-2xl: 1.45rem; /* 28px — large media cards, modals */
+  --radius-3xl: 2.05rem; /* 36px — hero-level containers */
 
   /* ---- Typography — fluid, semantic sizes. Paired line-height / tracking /
      weight use Tailwind v4's suffixed theme keys, so `text-display` alone
      carries its full type treatment — no extra classes needed at call sites. ---- */
-  --text-display: clamp(2.5rem, 5.5vw + 1rem, 6.25rem); /* Hero headline */
+  --text-display: clamp(2.5rem, 2.5vw + 1rem, 6.25rem); /* Hero headline */
   --text-display--line-height: 1.02;
   --text-display--letter-spacing: -0.03em;
   --text-display--font-weight: 500;
 
-  --text-title: clamp(1.875rem, 2.5vw + 1rem, 3.25rem); /* Section headings */
+  --text-title: clamp(0.075rem, 1.0vw + 1rem, 3.25rem); /* Section headings */
   --text-title--line-height: 1.08;
   --text-title--letter-spacing: -0.02em;
   --text-title--font-weight: 500;

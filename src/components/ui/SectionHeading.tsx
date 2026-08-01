@@ -28,7 +28,7 @@ export function SectionHeading({
     >
       {badge && <div className="mb-4">{badge}</div>}
       {eyebrow && (
-        <p className="mb-3 font-mono text-eyebrow uppercase text-teal-600">
+        <p className="before:inline-block before:h-px before:w-[22px] before:bg-teal-500/70 before:content-[''] mb-4 inline-flex items-center gap-2 font-mono text-eyebrow uppercase text-teal-600">
           {eyebrow}
         </p>
       )}

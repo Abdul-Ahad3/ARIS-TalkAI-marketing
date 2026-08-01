@@ -15,9 +15,9 @@ export default function Home() {
     <>
       <NavBar />
       <Hero />
+      <Ecosystem />
       <Problem />
       <Solution />
-      <Ecosystem />
       <Features />
       <Industries />
       <TechnologyPreview />
