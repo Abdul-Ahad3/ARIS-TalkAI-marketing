@@ -1,7 +1,10 @@
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 interface CtaBannerProps {
+  align: "left" | "center";
+  eyebrow: string;
   title: string;
   description: string;
   primaryLabel?: string;
@@ -11,20 +14,27 @@ interface CtaBannerProps {
 }
 
 export function CtaBanner({
+  align,
+  eyebrow,
   title,
   description,
   primaryLabel = "Request Demo",
   primaryHref = "/contact",
-  secondaryLabel = "Contact Sales",
-  secondaryHref = "/contact",
+  secondaryLabel,
+  secondaryHref,
 }: CtaBannerProps) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-teal-700 via-teal-800 to-ink py-section">
-      <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-teal-400/20 blur-3xl" />
+    <section className="relative overflow-hidden bg-gradient-to-br rounded-2xl from-ink via-ink2 to-teal-700 py-section">
+      <div className="pointer-events-none absolute -bottom-32 -left-32  rounded-full bg-teal-400/20 blur-3xl" />
       <Container>
+        <SectionHeading className="text-white"
+          align={align}
+          eyebrow={eyebrow}
+          title={title}
+          description={description}
+          color="white"
+        />
         <div className="relative mx-auto max-w-2xl text-center">
-          <h2 className="text-title text-balance text-white">{title}</h2>
-          <p className="mt-4 text-lg leading-relaxed text-white/80">{description}</p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Button href={primaryHref} size="lg" variant="secondary">{primaryLabel}</Button>
             <Button

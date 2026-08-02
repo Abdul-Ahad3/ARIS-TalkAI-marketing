@@ -8,6 +8,7 @@ interface SectionHeadingProps {
   description?: string;
   align?: "left" | "center";
   className?: string;
+  color?: "default" | "white";
 }
 
 export function SectionHeading({
@@ -32,9 +33,9 @@ export function SectionHeading({
           {eyebrow}
         </p>
       )}
-      <h2 className="text-title text-ink text-balance">{title}</h2>
+      <h2 className="text-title text-default text-balance">{title}</h2>
       {description && (
-        <p className="mt-4 text-lg text-ink-soft">{description}</p>
+        <p className="mt-4 text-lg text-default-soft">{description}</p>
       )}
     </div>
   );

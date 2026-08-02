@@ -1,4 +1,4 @@
-import { Globe, Link2 } from "lucide-react";
+import { ArrowRight, Globe, Link2 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ecosystemProducts } from "@/data/ecosystem";
@@ -44,9 +44,7 @@ export function Ecosystem() {
                 </div>
 
                 <a className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-teal-600 transition-colors hover:text-teal-400" href={title === "Embedded Edition" ? "/embedded" : "/tai-app"}>
-                  <div style={{ marginTop: '18px' }}><span className="arrow-link">Explore {title}
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></div>
-      
+                  Explore {title} <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
                 </a>
               </div>
             ))}

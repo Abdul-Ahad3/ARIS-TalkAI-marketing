@@ -5,16 +5,16 @@ import { industries } from "@/data/industries";
 
 export function Industries() {
   return (
-    <section className="bg-surface py-section">
+    <section className="bg-teal-50 py-section">
       <Container>
         <SectionHeading
-          align="center"
+          align="left"
           eyebrow="Who It's For"
           title="Built for the moments that matter."
-          description="From hospital rooms to factory floors, ARIS meets people where language shouldn't be the obstacle."
+          description=""
         />
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {industries.map((industry) => (
             <IndustryCard key={industry.title} {...industry} />
           ))}
