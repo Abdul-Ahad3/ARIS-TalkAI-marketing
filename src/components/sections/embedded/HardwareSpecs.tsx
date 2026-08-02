@@ -7,12 +7,12 @@ export function HardwareSpecs() {
   return (
     <section id="hardware-specs" className="bg-surface-soft py-section">
       <Container>
-        <SectionHeading align="center" eyebrow="Hardware" title="Built to disappear into daily use." />
-        <div className="mt-16">
+        <SectionHeading align="left" eyebrow="Hardware" title="Built to disappear into daily use." />
+        <div className="mt-16 text-left">
           <SpecGrid specs={hardwareSpecs} />
         </div>
-        <p className="mt-6 text-center text-xs text-ink-muted">
-          Specifications shown are preliminary and subject to change.
+        <p className="mt-6 text-left text-xs text-ink-muted">
+          Battery, range and weight are preliminary targets for the productised device and subject to change. More language pairs are on the roadmap.
         </p>
       </Container>
     </section>
