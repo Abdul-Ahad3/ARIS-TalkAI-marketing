@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 interface CtaBannerProps {
-  align: "left" | "center";
-  eyebrow: string;
+  align?: "left" | "center";
+  eyebrow?: string;
   title: string;
   description: string;
   primaryLabel?: string;
