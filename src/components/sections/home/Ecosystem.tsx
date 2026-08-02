@@ -2,6 +2,7 @@ import { Globe, Link2 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ecosystemProducts } from "@/data/ecosystem";
+import { Button } from "@/components/ui/Button";
 
 export function Ecosystem() {
   return (
@@ -16,7 +17,7 @@ export function Ecosystem() {
 
         <div className="mt-16">
           <div className="grid gap-6 sm:grid-cols-2">
-            {ecosystemProducts.map(({ title, tag, description }) => (
+            {ecosystemProducts.map(({ title, tag, description, runson, bestfor }) => (
               <div
                 key={title}
                 className="rounded-2xl bg-white p-8 shadow-card transition-all hover:-translate-y-1 hover:shadow-premium"
@@ -27,8 +28,26 @@ export function Ecosystem() {
                     </span>
                          
                 </div>
-                <h3 className="mt-6 text-lg font-medium text-ink">{title}</h3>
+                <b><h2 className="mt-6 text-lg font-medium text-ink">{title}</h2></b>
                 <p className="mt-2 text-sm leading-relaxed text-ink-soft">{description}</p>
+                
+                
+                <div className="mt-4 space-y-1.5 font-mono text-xs text-ink-2">
+                  <div className="flex justify-between gap-4">
+                    <span>runs on</span>
+                    <b className="font-medium text-ink">{runson}</b>
+                  </div>
+                  <div className="flex justify-between gap-4">
+                    <span>best for</span>
+                    <b className="font-medium text-ink">{bestfor}</b>
+                  </div>
+                </div>
+
+                <a className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-teal-600 transition-colors hover:text-teal-400" href={title === "Embedded Edition" ? "/embedded" : "/tai-app"}>
+                  <div style={{ marginTop: '18px' }}><span className="arrow-link">Explore {title}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></div>
+      
+                </a>
               </div>
             ))}
           </div>

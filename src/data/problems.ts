@@ -1,11 +1,10 @@
 import type {CommunicationBarrier} from "@/types/problem";
-import { Briefcase, Plane, HeartPulse, Headset, Users, GraduationCap } from "lucide-react";
 
 export const communicationBarriers: CommunicationBarrier[] = [
-  { icon: Briefcase, title: "Business Meetings", description: "A deal hangs on one mistranslated clause." },
-  { icon: Plane, title: "International Travel", description: "Asking for help shouldn't feel like a gamble." },
-  { icon: HeartPulse, title: "Healthcare", description: "Symptoms lost in translation put care at risk." },
-  { icon: Headset, title: "Customer Support", description: "Frustration builds when neither side understands." },
-  { icon: Users, title: "Families", description: "Grandparents and grandchildren, separated by language." },
-  { icon: GraduationCap, title: "Education", description: "A question unanswered because it couldn't be asked." },
+  { title: "Business Meetings", description: "Deals slow down when nuance gets lost between languages." },
+  { title: "Healthcare", description: "A patient and a clinician cannot afford to misunderstand each other." },
+  { title: "International Travel", description: "The moments you most need to be understood are often offline." },
+  { title: "Customer Support", description: "Every extra step to be understood costs trust and time." },
+  { title: "Families", description: "Distance and language should not keep people from staying close." },
+  { title: "Education", description: "Learning stalls when the language of instruction is a barrier." },
 ];

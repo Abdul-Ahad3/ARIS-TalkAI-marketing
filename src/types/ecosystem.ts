@@ -4,4 +4,6 @@ export interface EcosystemProduct {
   title: string;
   tag: string;
   description: string;
+  runson: string;
+  bestfor: string;
 }

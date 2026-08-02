@@ -1,9 +1,8 @@
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { WaveIndicator } from "@/components/ui/WaveInd";
 
 import { cn } from "@/lib/utils";
-import { Badge, Waves } from "lucide-react";
+import { Badge } from "lucide-react";
 
 const heroStats = [
   { label: "Offline device", value: "Nothing leaves the room" },
@@ -28,7 +27,7 @@ function Wave() {
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-20">
+    <section className="bg-surface-soft relative overflow-hidden pt-20">
             <div
         className="pointer-events-none absolute inset-0"
         style={{
