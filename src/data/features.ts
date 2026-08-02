@@ -1,4 +1,4 @@
-import type { Feature, FeatureGroup } from "@/types/feature";
+import type { FeatureGroup } from "@/types/feature";
 import { WifiOff, Cpu, ShieldCheck, Zap, AudioLines, Captions, Phone, Building2 } from "lucide-react";
 
 

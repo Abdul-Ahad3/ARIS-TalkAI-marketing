@@ -1,5 +1,4 @@
 import { EcosystemProduct } from "@/types/ecosystem";
-import { Cpu, Smartphone } from "lucide-react";
 
 
 export const ecosystemProducts: EcosystemProduct[] = [
