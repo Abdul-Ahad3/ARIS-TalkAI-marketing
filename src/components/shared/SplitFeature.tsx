@@ -39,7 +39,7 @@ export function SplitFeatureSection({
         >
           <div className="max-w-xl">
             <p className="mb-4 font-mono text-eyebrow uppercase text-teal-600">{eyebrow}</p>
-            <h2 className="text-title text-balance text-ink">{title}</h2>
+            <h2 className="text-title text-balance text-default">{title}</h2>
             <p className="mt-4 text-lg leading-relaxed text-ink-soft">{description}</p>
             {bullets && (
               <ul className="mt-6 space-y-3">

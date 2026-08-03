@@ -7,6 +7,7 @@ import { HardwareSpecs } from "@/components/sections/embedded/HardwareSpecs";
 import { EnterpriseApplications } from "@/components/sections/embedded/EnterpriseApps";
 import { CTA } from "@/components/sections/embedded/CTA";
 import { Footer } from "@/components/layout/Footer";
+import { DeviceProto } from "@/components/sections/embedded/DeviceProto";
 
 export default function EmbeddedPage() {
   return (
@@ -17,6 +18,7 @@ export default function EmbeddedPage() {
       <EdgeAI />
       <ContinuousListening />
       <HardwareSpecs />
+      <DeviceProto />
       <EnterpriseApplications />
       <CTA />
       <Footer />
