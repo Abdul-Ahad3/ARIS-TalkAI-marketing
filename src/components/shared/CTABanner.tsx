@@ -34,8 +34,8 @@ export function CtaBanner({
           description={description}
           color="white"
         />
-        <div className="relative mx-auto max-w-2xl text-center">
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+        <div className="relative mx-auto max-w-2xl text-left">
+          <div className="mt-10 flex flex-wrap items-left justify-left gap-4">
             <Button href={primaryHref} size="lg" variant="secondary">{primaryLabel}</Button>
             <Button
               href={secondaryHref}

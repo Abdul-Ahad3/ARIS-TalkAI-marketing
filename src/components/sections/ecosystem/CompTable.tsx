@@ -5,7 +5,7 @@ import { comparisonRows } from "@/data/eco-comparison";
 export function ComparisonTable() {
   return (
     <section className="bg-surface-soft justify-items-left py-section">
-      <Container size="narrow">
+      <Container>
         <SectionHeading align="left" eyebrow="Choosing Between Them" title="Not which is better. Which fits the moment." />
 
         <div className="mt-[2rem] justify-items-left overflow-hidden rounded-2xl border border-line">

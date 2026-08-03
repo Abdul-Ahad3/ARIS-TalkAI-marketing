@@ -2,23 +2,19 @@ import { GlossaryItem } from "@/types/tech-glossary";
 
 export const glossaryItems: GlossaryItem[] = [
   {
-    term: "ONNX",
-    summary: "The format that lets one AI model run efficiently on many devices.",
-    detail: "ONNX (Open Neural Network Exchange) is an open standard for AI models. Using it means the same interpretation model can run efficiently on the Embedded Edition's chip and in cloud servers, without being rebuilt from scratch for each one.",
+    term: "ONNX Runtime",
+    detail: "The format and runtime that let one AI model run efficiently across many kinds of device, from a laptop to a low‑power NPU.",
   },
   {
     term: "Latency",
-    summary: "The gap between speaking and being understood — kept as close to zero as possible.",
-    detail: "Natural conversation depends on speed. ARIS is engineered so interpretation keeps pace with speech, whether it's processed on-device or over a network connection, so conversation flows the way it normally would.",
+    detail: "The gap between speaking and being understood, kept as close to zero as possible.",
   },
   {
     term: "Privacy",
-    summary: "Your conversation is yours — by design, not by policy.",
-    detail: "Embedded Edition never sends audio anywhere; everything happens on the device itself. The TalkAI App encrypts data in transit and only processes what's needed to complete the call.",
+    detail: "Your conversation is yours, by design, not by policy. On the device, there is nothing to send.",
   },
   {
-    term: "Scalability",
-    summary: "Built the same way for one person or an entire organization.",
-    detail: "The same architecture that powers a single device also supports enterprise-wide deployments — consistent performance whether it's one unit in a clinic or hundreds across a company.",
+    term: "Quantization",
+    detail: "Shrinking a model so it runs fast on small hardware, without giving up the quality that matters.",
   },
 ];
