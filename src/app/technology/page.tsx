@@ -17,3 +17,7 @@ export default function TechnologyPage() {
     </>
   );
 }
+
+export const metadata = {
+  title: "Technology",
+};

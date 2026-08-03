@@ -19,3 +19,7 @@ export default function EcosystemPage() {
     </>
   );
 }
+
+export const metadata = {
+  title: "Ecosystem",
+};

@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="border-t border-line bg-ink">
       <Container className="grid grid-cols-1 gap-10 py-16 md:grid-cols-[1.5fr_repeat(3,1fr)]">
         <div className="flex flex-col gap-4">
-          <Logo />
+          <Logo className="text-white" />
           <p className="max-w-xs text-sm leading-relaxed text-ink-muted">
             Communicate anywhere. Online or offline. One ecosystem, every conversation.
           </p>

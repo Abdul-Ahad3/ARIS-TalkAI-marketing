@@ -25,3 +25,7 @@ export default function EmbeddedPage() {
     </>
   );
 }
+
+export const metadata = {
+  title: "Embedded Solution",
+};

@@ -3,25 +3,17 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/ui/Logo";
-import { MobileMenu } from "@/components/layout/MobileMenu";
+import { Button } from "@/components/ui/Button";
+import { MobileMenu } from "./MobileMenu";
 import { navLinks, navCta } from "@/data/navigation";
-import { NAV_SCROLL_THRESHOLD } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export function NavBar() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > NAV_SCROLL_THRESHOLD);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     setIsMenuOpen(false);
@@ -43,21 +35,12 @@ export function NavBar() {
   }, [isMenuOpen]);
 
   return (
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-colors bg-white duration-300 ease-premium",
-        isScrolled || isMenuOpen
-          ? "glass border-b border-line"
-          : "border-b border-transparent"
-      )}
-    >
-      <Container className="grid h-20 grid-cols-[auto_1fr_auto] items-center">
-        <Link href="/" aria-label="ARIS TalkAI home">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-surface-soft/[.82] backdrop-blur-md backdrop-saturate-[1.6]">
+      <Container>
+        <nav aria-label="Primary" className="flex h-[66px] items-center justify-between gap-6">
           <Logo />
-        </Link>
 
-        <nav aria-label="Primary" className="hidden justify-center md:flex">
-          <ul className="flex items-center gap-8">
+          <ul className="hidden items-center gap-[1.55rem] min-[901px]:flex">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -66,8 +49,10 @@ export function NavBar() {
                     href={link.href}
                     aria-current={isActive ? "page" : undefined}
                     className={cn(
-                      "text-sm font-medium transition-colors",
-                      isActive ? "text-ink" : "text-ink-soft hover:text-ink"
+                      "relative py-[0.3rem] font-mono text-[0.82rem] tracking-[0.02em] transition-colors after:absolute after:inset-x-0 after:-bottom-[3px] after:h-0.5 after:rounded-full after:content-['']",
+                      isActive
+                        ? "text-teal-600 after:bg-teal-500"
+                        : "text-ink-soft after:bg-transparent hover:text-ink"
                     )}
                   >
                     {link.label}
@@ -76,41 +61,24 @@ export function NavBar() {
               );
             })}
           </ul>
+
+          <div className="flex items-center gap-3">
+            <Button href={navCta.href} className="hidden min-[901px]:inline-flex">
+              {navCta.label}
+            </Button>
+
+            <button
+              type="button"
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
+              onClick={() => setIsMenuOpen((open) => !open)}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full text-ink min-[901px]:hidden"
+            >
+              {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
         </nav>
-
-        <div className="flex items-center justify-end gap-4">
-          <Button href={navCta.href} size="sm" className="hidden md:inline-flex">
-            {navCta.label}
-          </Button>
-
-          <button
-            type="button"
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isMenuOpen}
-            aria-controls="mobile-menu"
-            onClick={() => setIsMenuOpen((open) => !open)}
-            className="relative flex h-10 w-10 items-center justify-center md:hidden"
-          >
-            <span
-              className={cn(
-                "absolute h-0.5 w-5 bg-ink transition-all duration-300 ease-premium",
-                isMenuOpen ? "rotate-45" : "-translate-y-1.5"
-              )}
-            />
-            <span
-              className={cn(
-                "absolute h-0.5 w-5 bg-ink transition-opacity duration-300 ease-premium",
-                isMenuOpen ? "opacity-0" : "opacity-100"
-              )}
-            />
-            <span
-              className={cn(
-                "absolute h-0.5 w-5 bg-ink transition-all duration-300 ease-premium",
-                isMenuOpen ? "-rotate-45" : "translate-y-1.5"
-              )}
-            />
-          </button>
-        </div>
       </Container>
 
       <MobileMenu isOpen={isMenuOpen} />

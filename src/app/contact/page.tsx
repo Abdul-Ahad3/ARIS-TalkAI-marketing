@@ -13,3 +13,7 @@ export default function ContactPage() {
     </>
   );
 }
+
+export const metadata = {
+  title: "Contact Us",
+};
