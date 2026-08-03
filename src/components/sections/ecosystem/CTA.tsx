@@ -1,14 +1,18 @@
 import { CtaBanner } from "@/components/shared/CTABanner";
+import { Container } from "@/components/ui/Container";
 
 export function CTA() {
   return (
-    <CtaBanner
-      title="See each half of the ecosystem up close."
-      description="Explore Embedded Edition for private, offline conversation, or the TalkAI App for real-time calls across the world."
-      primaryLabel="Explore Embedded Edition"
-      primaryHref="/embedded"
-      secondaryLabel="Explore TalkAI App"
-      secondaryHref="/tai-app"
-    />
+   <section className="bg-surface-soft py-section">
+    <Container>
+       <CtaBanner
+        eyebrow="One Ecosystem"
+        title="See how it fits your world."
+        description="Tell us where your conversations happen, and we will show you which part of the ecosystem fits, or how they work together."
+        secondaryLabel="See the Technology"
+        secondaryHref="/tai-app"
+      />
+    </Container>
+   </section>
   );
 }

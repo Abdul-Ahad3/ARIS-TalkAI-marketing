@@ -1,9 +1,8 @@
-import { iconCard } from "@/types/card";
-import { ShieldCheck, Sparkles, Building2, RefreshCw } from "lucide-react";
+import { simpleCard } from "@/types/card";
 
-export const sharedFoundation: iconCard[] = [
-  { icon: ShieldCheck, title: "Privacy-First Architecture", description: "The same protective principles, whether the device is online or off." },
-  { icon: Sparkles, title: "One AI Engine", description: "Consistent interpretation quality across both products." },
-  { icon: Building2, title: "Enterprise Support", description: "One point of contact for deployment, training, and compliance." },
-  { icon: RefreshCw, title: "Continuous Improvement", description: "Regular updates to language coverage and voice quality." },
+export const sharedFoundation: simpleCard[] = [
+  { eyebrow: "Privacy-First Architecture", title: "Protective by default", description: "The same protective principles apply whether the device is online or off." },
+  { eyebrow: "One AI engine", title: "Consistent quality", description: "The same underlying pipeline gives consistent interpretation across both products." },
+  { eyebrow: "Enterprise support", title: "One point of contact", description: "A single team for deployment, training and compliance." },
+  { eyebrow: "Continuous improvement", title: "Always getting better", description: "Regular updates to language coverage and voice quality." },
 ];

@@ -5,45 +5,33 @@ import { cn } from "@/lib/utils";
 
 export function JourneyTimeline() {
   return (
-    <section id="journey" className="bg-surface-soft py-section">
+    <section id="journey" className="bg-teal-50 py-section">
       <Container>
         <SectionHeading
-          align="center"
+          align="left"
           eyebrow="One Day, One Ecosystem"
           title="The same understanding, wherever the day takes you."
           description="Two products, moving with you between the moments that need privacy and the ones that need reach."
         />
 
-        <div className="mx-auto mt-16 max-w-2xl">
-          {journeyMoments.map((moment, index) => (
-            <div key={moment.title} className="flex gap-6 pb-12 last:pb-0">
-              <div className="flex flex-col items-center">
+        <div className="text-left justify-items-left mt-16">
+          {journeyMoments.map((moment) => (
+            <div key={moment.title} className="flex items-left gap-6 pb-8 last:pb-0 grid-cols-1 text-center sm:grid sm:gap-2 sm:grid-cols-2">
+              <div className="flex flex-col items-left">
                 <span
                   className={cn(
-                    "flex h-14 w-14 shrink-0 items-center justify-center rounded-full",
-                    moment.mode === "embedded" ? "bg-ink text-teal-400" : "bg-teal-500/10 text-teal-600"
+                    "flex shrink-0 items-left justify-left grid-cols-1 text-left sm:grid sm:gap-2 sm:grid-cols-1"
                   )}
                 >
-                  <moment.icon size={20} />
-                </span>
-                {index < journeyMoments.length - 1 && (
-                  <span
-                    className={cn(
-                      "mt-2 w-0 flex-1",
-                      moment.mode === "embedded" ? "border-l-2 border-teal-500" : "border-l-2 border-dashed border-teal-400"
-                    )}
-                  />
-                )}
-              </div>
-              <div className="pt-2">
-                <div className="flex flex-wrap items-center gap-3">
-                  <span className="font-mono text-xs text-ink-muted">{moment.time}</span>
-                  <span className="rounded-full bg-surface-muted px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-ink-muted">
-                    {moment.mode === "embedded" ? "Embedded Edition" : "TalkAI App"}
+                  <span className=" text-left font-mono text-xs text-teal-500">{moment.time}</span>
+                  <span className=" text-left font-mono text-xs uppercase tracking-wider text-ink-soft">
+                    {moment.mode === "embedded" ? "Embedded" : "TalkAI App"}
                   </span>
-                </div>
-                <h3 className="mt-2 text-lg font-medium text-ink">{moment.title}</h3>
-                <p className="mt-1 text-sm leading-relaxed text-ink-soft">{moment.description}</p>
+                </span> 
+              </div>
+              <div className="items-left">
+                <h3 className=" text-left mt-1 text-lg font-medium text-ink">{moment.title}</h3>
+                <p className="text-left mt-1 text-sm leading-relaxed text-ink-soft">{moment.description}</p>
               </div>
             </div>
           ))}
