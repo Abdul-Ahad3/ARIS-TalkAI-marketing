@@ -1,25 +1,28 @@
 import { Phone } from "lucide-react";
 import { SplitFeatureSection } from "@/components/shared/SplitFeature";
+import Image from "next/image";
 
 export function CallingExperience() {
   return (
     <SplitFeatureSection
-      eyebrow="Calling Experience"
-      title="It's just a phone call. With understanding built in."
-      description="No separate app to open, no switching screens mid-conversation. TalkAI works inside the voice and video calls people already make, every day."
-      bullets={[
-        "Standard voice and video calling, nothing new to learn",
-        "Interpretation happens live, as the call happens",
-        "Works across iOS and Android",
-      ]}
+      className="justify-self-center bg-teal-50 text-center "
+      eyebrow="REAL SCREENS · RUNNING TODAY"
+      title="Translate, call, understand."
+      description=""
+      position="bottom"
       visual={
-        <div className="flex aspect-square flex-col items-center justify-center gap-6 rounded-3xl bg-teal-50 p-12">
-          <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-premium">
-            <Phone size={28} className="text-teal-600" />
+        <div className="flex flex-col items-center justify-center rounded-3xl grid-cols-1 text-center sm:grid sm:gap-2 sm:grid-cols-3">
+          <div className="mt-1 flex flex-col items-center text-center text-sm">
+            <Image className="mt-5 rounded-2xl border-5 border-ink shadow-[25px_10px_200px_rgba(0,0,0,0.25)]" src="/images/app-images/app-home.jpeg" alt="Device Prototype" width={250} height={800} />
+            <p className="text-center text-ink py-5">Home · pick languages</p>
           </div>
-          <div className="flex items-center gap-2 text-sm text-teal-700">
-            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-teal-500" />
-            <span className="font-mono">Live · 02:14</span>
+          <div className="mt-1 flex flex-col items-center text-center text-sm">
+            <Image className="mt-5 rounded-2xl border-5 border-ink shadow-[25px_10px_200px_rgba(0,0,0,0.25)]" src="/images/app-images/app-dialing.jpeg" alt="Device Prototype" width={250} height={800} />
+            <p className="text-center text-ink py-5">Call · translation on</p>
+          </div>
+          <div className="mt-1 flex flex-col items-center text-center text-sm">
+            <Image className="mt-5 rounded-2xl border-5 border-ink shadow-[25px_10px_200px_rgba(0,0,0,0.25)]" src="/images/app-images/app-call.jpeg" alt="Device Prototype" width={250} height={800} />
+            <p className="text-center text-ink py-5">Live · in-call translation</p>
           </div>
         </div>
       }

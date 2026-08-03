@@ -1,15 +1,21 @@
-import { ArrowRight, Smartphone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { cn } from "@/lib/utils";
+import Image from 'next/image'
+
+const heroStats = [
+  { label: "Platforms", value: "iOS & Android" },
+  { label: "End-to-end latency", value: "1.0-2.3 s", mono: true },
+  { label: "Status", value: "Beta, refining now", mono: true },
+];
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-surface pb-24 pt-32">
       <div className="pointer-events-none absolute -top-40 left-1/2 h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-teal-300/25 blur-3xl" />
-      <Container className="relative">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-6 inline-flex items-center gap-2 rounded-full bg-teal-50 px-4 py-1.5 font-mono text-eyebrow uppercase text-teal-600">
-            <Smartphone size={14} />
+      <Container className="relative grid gap-12 lg:grid-cols-2 lg:gap-16 justify-items-center">
+        <div className="mx-auto max-w-2xl text-left">
+          <p className="mb-6 inline-flex items-center gap-2 r px-4 py-1.5 font-mono text-eyebrow uppercase text-teal-600">
             TalkAI App
           </p>
           <h1 className="text-display text-balance text-ink">
@@ -19,32 +25,28 @@ export function Hero() {
             Talk to anyone, in any language — right inside a normal voice or
             video call, with live translation and transcript built in.
           </p>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-10 flex flex-wrap items-left justify-left gap-4">
             <Button href="/contact" size="lg">Request Demo</Button>
-            <Button href="#translation-demo" size="lg" variant="ghost" icon={<ArrowRight size={16} />} iconPosition="right">
-              See It In Action
+            <Button href="#translation-demo" size="lg" variant="ghost">
+              See How a call works
             </Button>
           </div>
-        </div>
 
-        <div className="relative mx-auto mt-16 max-w-sm">
-          <div className="rounded-[2.5rem] border border-line bg-surface-soft p-3 shadow-premium">
-            <div className="rounded-[2rem] bg-surface p-6">
-              <div className="flex items-center justify-between">
-                <span className="font-mono text-xs uppercase tracking-wider text-ink-muted">Live Call</span>
-                <span className="flex items-center gap-1.5 text-xs text-teal-600">
-                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-teal-500" />
-                  Connected
-                </span>
-              </div>
-              <div className="mt-6 space-y-3">
-                <div className="ml-auto h-2 w-2/3 rounded-full bg-teal-200" />
-                <div className="h-2 w-3/4 rounded-full bg-surface-muted" />
-                <div className="ml-auto h-2 w-1/2 rounded-full bg-teal-200" />
-              </div>
+          <div className="mt-10 flex flex-wrap gap-x-8 gap-y-6 border-t border-line pt-6">
+            {heroStats.map((stat) => (
+            <div key={stat.label}>
+              <p className="font-mono text-xs uppercase tracking-wider text-ink-muted">
+                {stat.label}
+              </p>
+              <p className={cn("mt-1.5 text-base font-semibold text-ink", stat.mono && "font-mono")}>
+                {stat.value}
+              </p>
             </div>
+            ))}
           </div>
         </div>
+        <Image className="mt-10 rounded-2xl border-5 border-ink shadow-[25px_10px_200px_rgba(0,0,0,0.25)]" src="/images/app-images/app-call.jpeg" alt="App Call" width={250} height={80} />
+        
       </Container>
     </section>
   );

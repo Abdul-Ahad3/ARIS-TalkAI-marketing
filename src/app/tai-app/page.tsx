@@ -1,7 +1,7 @@
 import { NavBar } from "@/components/layout/NavBar";
 import { Hero } from "@/components/sections/tai-app/Hero";
 import { CallingExperience } from "@/components/sections/tai-app/CallExp";
-import { LiveTranscript } from "@/components/sections/tai-app/LiveTranscript";
+import { LiveTranscript } from "@/components/sections/tai-app/Features";
 import { TranslationDemo } from "@/components/sections/tai-app/TranslationDemo";
 import { PlatformSupport } from "@/components/sections/tai-app/PlatformSupport";
 import { CTA } from "@/components/sections/tai-app/CTA";
