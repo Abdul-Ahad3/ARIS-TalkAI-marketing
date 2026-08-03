@@ -1,6 +1,6 @@
-import type { Card } from "@/types/card";
+import type { simpleCard } from "@/types/card";
 
-export const communicationBarriers: Card[] = [
+export const communicationBarriers: simpleCard[] = [
   { title: "Business Meetings", description: "Deals slow down when nuance gets lost between languages." },
   { title: "Healthcare", description: "A patient and a clinician cannot afford to misunderstand each other." },
   { title: "International Travel", description: "The moments you most need to be understood are often offline." },

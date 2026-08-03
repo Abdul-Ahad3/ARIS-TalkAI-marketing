@@ -1,6 +1,6 @@
-import { Card } from "@/types/card";
+import { simpleCard } from "@/types/card";
 
-export const embeddedFeatures: Card[] = [
+export const embeddedFeatures: simpleCard[] = [
   {
     eyebrow: "Detect",
     title: "Seliro VAD",

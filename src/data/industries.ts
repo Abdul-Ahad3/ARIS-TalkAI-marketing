@@ -1,9 +1,9 @@
-import type { Card } from "@/types/card";
+import type { iconCard } from "@/types/card";
 import { HeartPulse, Globe, Briefcase, Landmark, GraduationCap, Factory} from "lucide-react";
 
 
 
-export const industries: Card[] = [
+export const industries: iconCard[] = [
   { icon: HeartPulse, title: "Healthcare", description: "Clear communication between patients and providers, every time." },
   { icon: Globe, title: "Travel", description: "Navigate any country without missing a word." },
   { icon: Briefcase, title: "Business", description: "Negotiate, present, and close deals across languages." },

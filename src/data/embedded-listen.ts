@@ -1,6 +1,6 @@
-import { Card } from "@/types/card";
+import { simpleCard } from "@/types/card";
 
-export const Listening: Card[] = [
+export const Listening: simpleCard[] = [
     {
         title: "No wake delay",
         description: "Interpretation starts instantly, without waiting for a button press or wake word.",

@@ -1,6 +1,6 @@
-import { Card } from "@/types/card";
+import { simpleCard } from "@/types/card";
 
-export const offlineAdvantages: Card[] = [
+export const offlineAdvantages: simpleCard[] = [
   {
     title: "No signal or Wi‑Fi required, anywhere",
     description: "The device does not look for a network to do its job.",
