@@ -1,9 +1,9 @@
 import { NavBar } from "@/components/layout/NavBar";
 import { Hero } from "@/components/sections/tai-app/Hero";
 import { CallingExperience } from "@/components/sections/tai-app/CallExp";
-import { LiveTranscript } from "@/components/sections/tai-app/Features";
+import { Features } from "@/components/sections/tai-app/Features";
 import { TranslationDemo } from "@/components/sections/tai-app/TranslationDemo";
-import { PlatformSupport } from "@/components/sections/tai-app/PlatformSupport";
+import { CurrentSTanding } from "@/components/sections/tai-app/CurrentStanding";
 import { CTA } from "@/components/sections/tai-app/CTA";
 import { Footer } from "@/components/layout/Footer";
 
@@ -13,9 +13,9 @@ export default function TaiAppPage() {
       <NavBar />
       <Hero />
       <CallingExperience />
-      <LiveTranscript />
+      <Features />
       <TranslationDemo />
-      <PlatformSupport />
+      <CurrentSTanding />
       <CTA />
       <Footer />
     </>

@@ -1,10 +1,10 @@
-import { Captions } from "lucide-react";
 import { SplitFeatureSection } from "@/components/shared/SplitFeature";
 import { appFeatures } from "@/data/app-feats";
 
-export function LiveTranscript() {
+export function Features() {
   return (
     <SplitFeatureSection
+      className="bg-surface"
       eyebrow="Features"
       title="Everything a real conversation needs."
       description=""
@@ -15,7 +15,7 @@ export function LiveTranscript() {
           {appFeatures.map(({ eyebrow, title, description }) => (
           <div
             key={title}
-            className="rounded-lg bg-white p-7 shadow-card "
+            className="rounded-lg bg-white p-7 shadow-card hover:bg-surface hover:shadow-[5px_5px_2px_3px] hover:shadow-ink/10"
           >
             <p className="text-sm font-semibold text-teal-500">{eyebrow}</p>
             <h3 className="mt-2 text-lg font-medium text-ink">{title}</h3>
