@@ -1,9 +1,8 @@
-import { iconCard } from "@/types/card";
-import { ShieldCheck, Users, Wrench, Globe } from "lucide-react";
+import { simpleCard } from "@/types/card";
 
-export const companyValues: iconCard[] = [
-  { icon: ShieldCheck, title: "Privacy as a Right", description: "Not a feature to upsell — a baseline we design around." },
-  { icon: Users, title: "Built for Real People", description: "Every decision starts with the person on the other end of the conversation." },
-  { icon: Wrench, title: "No Shortcuts", description: "Reliability matters more in the moments that matter most." },
-  { icon: Globe, title: "Global by Default", description: "Designed to work across languages, cultures, and connectivity." },
+export const companyValues: simpleCard[] = [
+  { eyebrow: "01 · Privacy as a right", title: "Not a feature to upsell", description: "A baseline we design around, so the most sensitive conversations stay in the room." },
+  { eyebrow: "02 · Built for real people", title: "The person on the other end", description: "Every decision starts with the human trying to be understood." },
+  { eyebrow: "03 · No shortcuts", title: "Reliability where it counts", description: "Reliability matters more in the moments that matter most." },
+  { eyebrow: "04 · Global by default", title: "Across every divide", description: "Designed to work across languages, cultures and connectivity." },
 ];
