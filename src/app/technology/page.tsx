@@ -1,6 +1,7 @@
 import { NavBar } from "@/components/layout/NavBar";
 import { Hero } from "@/components/sections/technology/Hero";
 import { ProcessDiagram } from "@/components/sections/technology/ProcessDiagram";
+import { Performance } from "@/components/sections/technology/Performance";
 import { TechnologyGlossary } from "@/components/sections/technology/TechGlossary";
 import { CTA } from "@/components/sections/technology/CTA";
 import { Footer } from "@/components/layout/Footer";
@@ -11,6 +12,7 @@ export default function TechnologyPage() {
       <NavBar />
       <Hero />
       <ProcessDiagram />
+      <Performance />
       <TechnologyGlossary />
       <CTA />
       <Footer />
