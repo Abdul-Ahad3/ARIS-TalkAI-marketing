@@ -1,4 +1,3 @@
-import { Mic, Cpu, Volume2 } from "lucide-react";
 import { SplitFeatureSection } from "@/components/shared/SplitFeature";
 import { embeddedFeatures } from "@/data/embedded-feats";
 

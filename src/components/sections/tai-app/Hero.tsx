@@ -19,11 +19,10 @@ export function Hero() {
             TalkAI App
           </p>
           <h1 className="text-display text-balance text-ink">
-            Every call, <span className="text-gradient-teal">understood.</span>
+            A live interpreter, <span className="text-gradient-teal">in your pocket.</span>
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-ink-soft">
-            Talk to anyone, in any language — right inside a normal voice or
-            video call, with live translation and transcript built in.
+            Call anyone in another language and each side hears the other in their own, with a live transcript on screen. When there is a connection, the app brings broader language support and instant, natural voice.
           </p>
           <div className="mt-10 flex flex-wrap items-left justify-left gap-4">
             <Button href="/contact" size="lg">Request Demo</Button>

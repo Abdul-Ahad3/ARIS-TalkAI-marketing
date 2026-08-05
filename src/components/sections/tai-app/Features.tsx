@@ -15,7 +15,7 @@ export function Features() {
           {appFeatures.map(({ eyebrow, title, description }) => (
           <div
             key={title}
-            className="rounded-lg bg-white p-7 shadow-card hover:bg-surface hover:shadow-[5px_5px_2px_3px] hover:shadow-ink/10"
+            className="rounded-lg bg-white p-7 shadow-card hover:bg-surface hover:shadow-premium"
           >
             <p className="text-sm font-semibold text-teal-500">{eyebrow}</p>
             <h3 className="mt-2 text-lg font-medium text-ink">{title}</h3>

@@ -1,4 +1,3 @@
-import { WifiOff } from "lucide-react";
 import { SplitFeatureSection } from "@/components/shared/SplitFeature";
 import { offlineAdvantages } from "@/data/offline-advs";
 

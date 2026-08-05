@@ -1,4 +1,3 @@
-import {SectionHeading} from "@/components/ui/SectionHeading";
 import { Container } from "@/components/ui/Container";
 import { CtaBanner } from "@/components/shared/CTABanner";
 

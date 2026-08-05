@@ -1,8 +1,7 @@
-import { ArrowRight, Globe, Link2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ecosystemProducts } from "@/data/ecosystem";
-import { Button } from "@/components/ui/Button";
 
 export function Ecosystem() {
   return (

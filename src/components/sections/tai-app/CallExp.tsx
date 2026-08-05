@@ -1,4 +1,3 @@
-import { Phone } from "lucide-react";
 import { SplitFeatureSection } from "@/components/shared/SplitFeature";
 import Image from "next/image";
 

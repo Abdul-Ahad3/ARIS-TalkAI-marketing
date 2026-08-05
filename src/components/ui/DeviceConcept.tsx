@@ -14,8 +14,8 @@ export function DeviceConcept() {
           <rect x="58" y="22" width="184" height="426" rx="34" fill="none" stroke="#12252C" strokeWidth="1"/>
           
           <rect x="78" y="52" width="144" height="92" rx="16" fill="#0B1A1F" stroke="#1E3C45" strokeWidth="1"/>
-          <text x="150" y="92" text-anchor="middle" fill="#E9F3F3" font-family="Geist, sans-serif" fontSize="26" fontWeight="600">EN&#8652;FR</text>
-          <text x="150" y="120" text-anchor="middle" fill="#37CBDC" font-family="Geist Mono, monospace" fontSize="10" letterSpacing="2">OFFLINE</text>
+          <text x="150" y="92" textAnchor="middle" fill="#E9F3F3" fontFamily="Geist, sans-serif" fontSize="26" fontWeight="600">EN&#8652;FR</text>
+          <text x="150" y="120" textAnchor="middle" fill="#37CBDC" fontFamily="Geist Mono, monospace" fontSize="10" letterSpacing="2">OFFLINE</text>
           
           <g stroke="#37CBDC" strokeWidth="3" strokeLinecap="round">
             <line x1="108" y1="176" x2="108" y2="192"/><line x1="122" y1="168" x2="122" y2="200"/>
@@ -26,7 +26,7 @@ export function DeviceConcept() {
           
           <rect x="86" y="236" width="128" height="120" rx="14" fill="url(#grille)"/>
           
-          <circle cx="150" cy="404" r="26" fill="#0E2027" stroke="#37CBDC" stroke-width="2"/>
+          <circle cx="150" cy="404" r="26" fill="#0E2027" stroke="#37CBDC" strokeWidth="2"/>
           <circle cx="150" cy="404" r="8" fill="#37CBDC"/>
           
           <rect x="250" y="150" width="4" height="46" rx="2" fill="#274A54"/>
