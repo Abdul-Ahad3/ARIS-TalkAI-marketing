@@ -10,7 +10,7 @@ const interests = [
   "Enterprise Partnership",
 ];
 
-const inputStyles = "w-full rounded-lg border border-line bg-surface px-4 py-2.5 text-sm text-ink";
+const inputStyles = "w-full rounded-lg border border-line bg-white px-4 py-2.5 text-sm text-ink";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "sent">("idle");
@@ -35,15 +35,15 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="grid gap-5">
+    <form onSubmit={handleSubmit} className="grid gap-5 bg-white p-5 border border-line rounded-lg hover:shadow-premium">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="mb-2 block text-sm font-medium text-ink">Name</label>
-          <input id="name" name="name" type="text" required className={inputStyles} />
+          <input id="name" name="name" type="text" placeholder="Your Name" required className={inputStyles} />
         </div>
         <div>
           <label htmlFor="email" className="mb-2 block text-sm font-medium text-ink">Email</label>
-          <input id="email" name="email" type="email" required className={inputStyles} />
+          <input id="email" name="email" type="email" placeholder="you@compay.com" required className={inputStyles} />
         </div>
       </div>
 
@@ -52,10 +52,10 @@ export function ContactForm() {
           <label htmlFor="company" className="mb-2 block text-sm font-medium text-ink">
             Company <span className="text-ink-muted">(optional)</span>
           </label>
-          <input id="company" name="company" type="text" className={inputStyles} />
+          <input id="company" name="company" type="text" placeholder="Organization or Facility" className={inputStyles} />
         </div>
         <div>
-          <label htmlFor="interest" className="mb-2 block text-sm font-medium text-ink">I'm interested in</label>
+          <label htmlFor="interest" className="mb-2 block text-sm font-medium text-ink">I am interested in</label>
           <select id="interest" name="interest" required className={inputStyles}>
             {interests.map((interest) => (
               <option key={interest} value={interest}>{interest}</option>
@@ -66,7 +66,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="message" className="mb-2 block text-sm font-medium text-ink">Message</label>
-        <textarea id="message" name="message" required rows={5} className={inputStyles} />
+        <textarea id="message" name="message" placeholder="Tell us where your conversations happen, and what you are trying to solve" required rows={5} className={inputStyles} />
       </div>
 
       <Button type="submit" size="lg" loading={status === "loading"} className="mt-2 justify-self-start">
