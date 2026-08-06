@@ -6,6 +6,7 @@ import { Solution } from "@/components/sections/home/Solution";
 import { Ecosystem } from "@/components/sections/home/Ecosystem";
 import { Industries } from "@/components/sections/home/Industries";
 import { TechnologyPreview } from "@/components/sections/home/TechPreview";
+import { EarlyAccess } from "@/components/sections/home/EarlyAccess";
 import { CTA } from "@/components/sections/home/CTA";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Solution />
       <Industries />
       <TechnologyPreview />
+      <EarlyAccess />
       <CTA />
       <Footer />
     </>
