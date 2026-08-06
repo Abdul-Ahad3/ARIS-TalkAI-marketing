@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { AnimatedLangDisplay } from "@/components/ui/AnimatedLangDisplay";
 
 import { cn } from "@/lib/utils";
 import { Badge } from "lucide-react";
@@ -84,9 +85,7 @@ export function Hero() {
               </span>
               <Wave />
             </div>
-            <div className="mt-4 flex items-center gap-2 text-[1.7rem] font-semibold tracking-[-0.02em]">
-              EN <span className="text-lg text-teal-400">⇄</span> FR
-            </div>
+            <AnimatedLangDisplay />
             <div className="mt-4 space-y-1.5 font-mono text-xs text-on-ink-2">
               <div className="flex justify-between gap-4">
                 <span>status</span>
