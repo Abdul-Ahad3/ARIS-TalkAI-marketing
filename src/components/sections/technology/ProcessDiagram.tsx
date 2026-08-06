@@ -1,4 +1,3 @@
-import { Mic, Sparkles, Cpu, Cloud } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { techFeatures } from "@/data/tech-feats";
@@ -12,7 +11,7 @@ export function ProcessDiagram() {
           align="left"
           eyebrow="How It Works"
           title="One AI engine. Two ways to run it."
-          description="Whether a conversation is processed on the device or in the cloud, it's the same underlying AI — just deployed differently, depending on what the moment needs."
+          description="Whether a conversation is processed on the device or in the cloud, it's the same underlying AI, just deployed differently, depending on what the moment needs."
         />
 
         <div className="mt-10 grid gap-8 lg:grid-cols-2">

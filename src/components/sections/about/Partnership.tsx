@@ -1,5 +1,3 @@
-import { Handshake } from "lucide-react";
-import { Container } from "@/components/ui/Container";
 import { aboutPartner } from "@/data/about-partner";
 import { SplitFeatureSection } from "@/components/shared/SplitFeature";
 

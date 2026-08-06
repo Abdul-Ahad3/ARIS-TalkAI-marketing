@@ -11,7 +11,7 @@ export function Hero() {
             Every conversation deserves to be <span className="text-gradient-teal">understood.</span>
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-ink-soft">
-            ARIS TalkAI exists to remove language as an obstacle — whether
+            ARIS TalkAI exists to remove language as an obstacle, whether
             that means a private, offline device or a real-time app that
             fits in your pocket.
           </p>
