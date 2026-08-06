@@ -28,7 +28,6 @@ export function HowItWorks() {
               icon={step.icon}
               title={step.title}
               description={step.description}
-              step={index + 1}
               isLast={index === cloudPipeline.length - 1}
             />
           ))}

@@ -30,7 +30,6 @@ export function ConversationScenarios() {
               icon={scenario.icon}
               title={scenario.title}
               description={scenario.description}
-              accent={scenario.accent as any}
             />
           ))}
         </div>
