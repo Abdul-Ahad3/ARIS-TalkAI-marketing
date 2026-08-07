@@ -5,6 +5,8 @@ import { WorksEverywhere } from "@/components/sections/cloud-api/Works";
 import { ConversationScenarios } from "@/components/sections/cloud-api/ConvScenarios";
 import { BuildApps } from "@/components/sections/cloud-api/BuildApps";
 import { HowItWorks } from "@/components/sections/cloud-api/HowItWorks";
+import { WhyChooseRTT } from "@/components/sections/cloud-api/WhyChooseRTT";
+import { ComingSoon } from "@/components/sections/cloud-api/ComingSoon";
 import { Footer } from "@/components/layout/Footer";
 
 export default function CloudApiPage() {
@@ -17,6 +19,8 @@ export default function CloudApiPage() {
       <ConversationScenarios />
       <BuildApps />
       <HowItWorks />
+      <WhyChooseRTT />
+      <ComingSoon />
       <Footer />
     </>
   );
