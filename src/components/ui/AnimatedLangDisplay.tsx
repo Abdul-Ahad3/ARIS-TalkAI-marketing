@@ -4,13 +4,21 @@ import { useEffect, useState } from "react";
 
 const LANGUAGE_PAIRS = [
   "EN ⇄ FR",
+  "FR ⇄ EN",
   "EN ⇄ ES",
+  "ES ⇄ EN",
   "EN ⇄ DE",
+  "DE ⇄ EN",
   "EN ⇄ AR",
+  "AR ⇄ EN",
   "EN ⇄ UR",
+  "UR ⇄ EN",
   "EN ⇄ HI",
+  "HI ⇄ EN",
   "EN ⇄ JA",
+  "JA ⇄ EN",
   "EN ⇄ ZH",
+  "ZH ⇄ EN",
 ];
 
 export function AnimatedLangDisplay() {
