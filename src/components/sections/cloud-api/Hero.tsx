@@ -1,5 +1,5 @@
-import {  ArrowRight, Cloud, Globe, Mic, Network, Radio } from "lucide-react";
-
+import {  Cloud, Globe, Mic, Network, Radio } from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 
@@ -28,7 +28,7 @@ export function Hero() {
           <div className="inline-flex items-center gap-2 px-4 py-2">
             
 
-            <span className="font-mono text-xs uppercase tracking-[0.2em] text-teal-600">
+            <span className="font-mono text-xs text-eyebrow uppercase tracking-[0.2em] text-teal-600">
               Future Platform · Coming Soon
             </span>
           </div>
@@ -67,9 +67,8 @@ export function Hero() {
             {integrations.map((platform) => (
               <div
                 key={platform}
-                className="rounded-full border border-line bg-surface px-4 py-2 text-sm text-ink-soft shadow-sm"
               >
-                {platform}
+                <Badge variant="outline">{platform}</Badge>
               </div>
             ))}
           </div>

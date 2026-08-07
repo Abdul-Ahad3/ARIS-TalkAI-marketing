@@ -2,6 +2,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { techFeatures } from "@/data/tech-feats";
 import { FeatureCard } from "@/components/ui/FeatureCard";
+import { Badge } from "@/components/ui/Badge";
 
 export function ProcessDiagram() {
   return (
@@ -17,7 +18,7 @@ export function ProcessDiagram() {
         <div className="mt-10 grid gap-8 lg:grid-cols-2">
           {techFeatures.map((group) => (
           <div key={group.eyebrow} className="rounded-2xl bg-surface p-8 hover:shadow-premium">
-              <span className="font-mono text-eyebrow bg-teal-400/20 rounded-full px-4 py-2 uppercase text-teal-600">{group.eyebrow}</span>
+              <Badge variant="teal">{group.eyebrow}</Badge>
               <h3 className="mt-2 text-2xl font-medium text-ink">{group.label}</h3>
               <p className="mt-2 text-xs leading-relaxed text-ink-soft">{group.description}</p>
               <div className="mt-2">

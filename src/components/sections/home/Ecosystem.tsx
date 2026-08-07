@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ecosystemProducts } from "@/data/ecosystem";
+import { Badge } from "@/components/ui/Badge";
 
 export function Ecosystem() {
   return (
@@ -22,9 +23,7 @@ export function Ecosystem() {
                 className="rounded-2xl bg-white p-8 shadow-card transition-all hover:-translate-y-1 hover:shadow-premium"
               >
                 <div className="flex items-center justify-between">
-                  <span className="rounded-full bg-teal-400/10 px-3 py-1 font-mono text-xs text-ink-muted">
-                      {tag}
-                    </span>
+                  <Badge variant="teal">{tag}</Badge>
                          
                 </div>
                 <b><h2 className="mt-6 text-lg font-medium text-ink">{title}</h2></b>

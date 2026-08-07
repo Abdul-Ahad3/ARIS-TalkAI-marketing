@@ -2,6 +2,7 @@ import { ArrowRightLeft, Languages, Mic } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Badge } from "@/components/ui/Badge";
 
 const conversation = [
   {
@@ -65,9 +66,7 @@ export function MultiLang() {
                   Live Conversation
                 </span>
 
-                <span className="rounded-full bg-teal-500/10 px-3 py-1 text-xs font-medium text-teal-600">
-                  Real-Time
-                </span>
+                <Badge variant="teal">Real Time</Badge>
               </div>
 
               <div className="space-y-6">

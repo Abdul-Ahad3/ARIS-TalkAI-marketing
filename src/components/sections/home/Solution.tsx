@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { solutionSteps } from "@/data/solutions";
+import { Badge } from "@/components/ui/Badge";
 
 export function Solution() {
   return (
@@ -16,12 +17,8 @@ export function Solution() {
           />
 
           <div className="mt-6 flex flex-wrap gap-4">
-            <span className="rounded-full bg-teal-400/15 px-4 py-2 font-mono text-sm text-teal-500">
-              Edge · fully on-device
-            </span>
-            <span className="rounded-full bg-teal-400/15 px-4 py-2 font-mono text-sm text-teal-500">
-              Cloud · Broader Languages
-            </span>
+            <Badge variant="teal">Edge · fully on-device</Badge>
+            <Badge variant="teal">Cloud · Broader Languages</Badge>
           </div>
           <a href="/technology" className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-teal-600 transition-colors hover:text-teal-400">See the Full Technology <ArrowRight size={16}/> </a>
         </div>

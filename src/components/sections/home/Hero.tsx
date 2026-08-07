@@ -1,9 +1,9 @@
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { AnimatedLangDisplay } from "@/components/ui/AnimatedLangDisplay";
+import { Badge } from "@/components/ui/Badge";
 
 import { cn } from "@/lib/utils";
-import { Badge } from "lucide-react";
 
 const heroStats = [
   { label: "Offline device", value: "Nothing leaves the room" },
@@ -108,7 +108,7 @@ export function Hero() {
               <span className="font-mono text-xs uppercase tracking-wider text-teal-600">
                 TalkAI App
               </span>
-              <Badge size={16} className="text-teal-600">
+              <Badge variant="teal">
                 Live call
               </Badge>
             </div>
