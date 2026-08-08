@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { demoList } from "@/data/app-demo-list";
+import { Badge } from "@/components/ui/Badge";
 
 export function TranslationDemo() {
   return (
@@ -28,18 +29,12 @@ export function TranslationDemo() {
         </div>
         
         <div className="mt-6 flex flex-wrap gap-4">
-          <span className="rounded-full bg-teal-400/20 px-4 py-2 font-mono text-sm text-white">
-            WebRTC calls · Cloudflare TURN
-          </span>
-          <span className="rounded-full bg-teal-400/20 px-4 py-2 font-mono text-sm text-white">
-            React Native · iOS & Android
-          </span>
-          <span className="rounded-full bg-teal-400/20 px-4 py-2 font-mono text-sm text-white">
-            Encrypted in transit · Supabase
-          </span>
+          <Badge variant="dark">WebRTC calls · Cloudflare TURN</Badge>
+          <Badge variant="dark">React Native · iOS & Android</Badge>
+          <Badge variant="dark">Encrypted in transit · Supabase</Badge>
         </div>
 
-        <p className="text-ink-soft">
+        <p className=" mt-3 text-ink-soft">
           The same engine that runs offline on Embedded Edition. On the app, it runs in the cloud for broader language support.
         </p>
 

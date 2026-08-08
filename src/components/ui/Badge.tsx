@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 interface BadgeProps {
   children: React.ReactNode;
-  variant?: "default" | "teal" | "outline";
+  variant?: "default" | "teal" | "outline" | "dark";
 }
 
 export function Badge({
@@ -22,6 +22,9 @@ export function Badge({
 
           "border-line bg-transparent text-ink":
             variant === "outline",
+          
+          "bg-teal-400/20 text-ink-muted":
+            variant === "dark",
         }
       )}
     >

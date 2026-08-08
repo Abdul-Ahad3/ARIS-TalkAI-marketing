@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Badge } from "@/components/ui/Badge";
 import Image from "next/image";
 
 export function DeviceProto() {
@@ -13,15 +14,9 @@ export function DeviceProto() {
                     description="This is our working engineering prototype. The full offline pipeline already translates English to French on‑device, and every run saves the audio, text and measured latency as evidence. The next step is bringing it into a compact, dedicated device."
                 />
                 <div className="mt-6 flex flex-wrap gap-4">
-                    <span className="rounded-full bg-teal-400/20 px-4 py-2 font-mono text-sm text-ink-muted">
-                        ON-DEVICE STACK
-                    </span>
-                    <span className="rounded-full bg-teal-400/20 px-4 py-2 font-mono text-sm text-ink-muted">
-                        EN ⇄ FR validated
-                    </span>
-                    <span className="rounded-full bg-teal-400/20 px-4 py-2 font-mono text-sm text-ink-muted">
-                        NO INTERNET
-                    </span>
+                    <Badge variant="dark">ON-DEVICE STACK</Badge>
+                    <Badge variant="dark">EN ⇄ FR validated</Badge>
+                    <Badge variant="dark">NO INTERNET</Badge>
                 </div>
             </div>
             <div className="mt-3 flex flex-col items-left text-left border-rounded border-ink/20 bg-ink/10 text-sm">
