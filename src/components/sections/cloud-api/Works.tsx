@@ -1,5 +1,4 @@
 import { Container } from "@/components/ui/Container";
-import { IntegrationShowcase } from "@/components/ui/IntegShowcase";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const workflow = [
@@ -58,11 +57,6 @@ export function WorksEverywhere() {
           </div>
         </div>
 
-        {/* Integration Showcase */}
-
-        <div className="mt-24">
-          <IntegrationShowcase />
-        </div>
       </Container>
     </section>
   );

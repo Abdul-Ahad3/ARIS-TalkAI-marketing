@@ -28,7 +28,7 @@ const roadmap = [
 
 export function ComingSoon() {
   return (
-    <section className="relative overflow-hidden py-28 bg-gradient-to-br from-ink via-ink2 to-teal-700">
+    <section className="relative overflow-hidden py-28 bg-gradient-to-br from-ink via-ink-soft to-teal-700">
       <Container className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2"> 
         <div className="mt-10">
             <SectionHeading

@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 
 import { cloudApplications } from "@/data/cloud-apps";
-
+import { Badge } from "@/components/ui/Badge";
 import { AppCard } from "@/components/ui/AppCard";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -11,7 +11,7 @@ export function BuildApps() {
   return (
     <section className="relative overflow-hidden py-28">
       <Container>
-        <div className="grid gap-16 xl:grid-cols-1 xl:items-start">
+        <div className="grid gap-16 xl:grid-cols-2 xl:items-start">
           <div>
             <SectionHeading
               eyebrow="Developer Platform"
@@ -37,12 +37,9 @@ export function BuildApps() {
             </div>
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {cloudApplications.map((application) => (
-              <AppCard
-                key={application.title}
-                {...application}
-              />
+              <Badge key={application.title} variant="teal">{application.title}</Badge>
             ))}
           </div>
         </div>
