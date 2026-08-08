@@ -2,14 +2,13 @@ import { ArrowRight } from "lucide-react";
 
 import { cloudApplications } from "@/data/cloud-apps";
 import { Badge } from "@/components/ui/Badge";
-import { AppCard } from "@/components/ui/AppCard";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function BuildApps() {
   return (
-    <section className="relative overflow-hidden py-28">
+    <section className="relative overflow-hidden py-section">
       <Container>
         <div className="grid gap-16 xl:grid-cols-2 xl:items-start">
           <div>
