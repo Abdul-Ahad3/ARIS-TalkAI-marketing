@@ -25,3 +25,7 @@ export default function CloudApiPage() {
     </>
   );
 }
+
+export const metadata = {
+  title: "Cloud and API",
+};
