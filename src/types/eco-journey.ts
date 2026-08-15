@@ -1,8 +1,6 @@
-import type { LucideIcon } from "lucide-react";
-
 export interface JourneyMoment {
   time: string;
-  mode: "embedded" | "mobile" | "cloud&api";
+  mode: "embedded" | "mobile" | "capi";
   title: string;
   description: string;
 }

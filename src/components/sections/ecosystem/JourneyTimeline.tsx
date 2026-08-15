@@ -3,6 +3,14 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { journeyMoments } from "@/data/eco-journey";
 import { cn } from "@/lib/utils";
 
+
+const modeLabel: Record<string, string> = {
+  embedded: "Embedded Edition",
+  mobile: "TalkAI App",
+  capi: "Cloud & API",
+};
+
+
 export function JourneyTimeline() {
   return (
     <section id="journey" className="bg-teal-50 py-section">
@@ -24,8 +32,8 @@ export function JourneyTimeline() {
                   )}
                 >
                   <span className=" text-left font-mono text-xs text-teal-500">{moment.time}</span>
-                  <span className=" text-left font-mono text-xs uppercase tracking-wider text-ink-soft">
-                    {moment.mode === "embedded" ? "Embedded" : "TalkAI App"}
+                  <span className="font-mono text-xs uppercase tracking-wider text-ink-soft">
+                    {modeLabel[moment.mode] ?? moment.mode}
                   </span>
                 </span> 
               </div>
