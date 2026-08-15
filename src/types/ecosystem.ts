@@ -6,4 +6,6 @@ export interface EcosystemProduct {
   description: string;
   runson: string;
   bestfor: string;
+  href: string;
+  comingSoon?: boolean;
 }
