@@ -14,6 +14,7 @@ export const footerColumns: FooterColumn[] = [
     links: [
       { label: "Embedded Edition", href: "/embedded" },
       { label: "TalkAI App", href: "/tai-app" },
+      { label: "Cloud & API", href: "/cloud-api" },
     ],
   },
   {
