@@ -37,7 +37,7 @@ export function SplitFeatureSection({
             isBottom ? "grid-cols-1" : "lg:grid-cols-2 lg:gap-16"
           )}
         >
-          <div className="max-w-xl">
+          <div className={cn("max-w-xl", isBottom && "mx-auto text-auto")}>
             <p className="mb-4 font-mono text-eyebrow uppercase text-teal-600">{eyebrow}</p>
             <h2 className="text-title text-balance text-default">{title}</h2>
             <p className="mt-4 text-lg leading-relaxed text-ink-soft">{description}</p>

@@ -4,7 +4,7 @@ import Image from "next/image";
 export function CallingExperience() {
   return (
     <SplitFeatureSection
-      className="justify-self-center bg-teal-50 text-center "
+      className="bg-teal-50 text-center "
       eyebrow="REAL SCREENS · RUNNING TODAY"
       title="Translate, call, understand."
       description=""

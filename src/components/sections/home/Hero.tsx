@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { AnimatedLangDisplay } from "@/components/ui/AnimatedLangDisplay";
@@ -29,7 +30,7 @@ function Wave() {
 export function Hero() {
   return (
     <section className="bg-surface-soft relative overflow-hidden pt-20">
-            <div
+      <div
         className="pointer-events-none absolute inset-0"
         style={{
           background:
@@ -38,7 +39,7 @@ export function Hero() {
       />
 
       <Container className="relative grid gap-10 py-[clamp(3rem,7vw,6rem)] lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16">
-        
+
         <div>
           <p className="before:inline-block before:h-px before:w-[22px] before:bg-teal-500/70 before:content-[''] mb-4 inline-flex items-center gap-2 font-mono text-eyebrow uppercase text-teal-600">
             One engine · two ways to run it
@@ -75,7 +76,7 @@ export function Hero() {
           </div>
         </div>
 
-        {/* visual column — dual panel, stacked, reordered above copy on mobile */}
+        {/* visual column — triple panel, stacked, reordered above copy on mobile */}
         <div className="order-first grid gap-4 lg:order-last">
           {/* offline panel — Embedded Edition */}
           <div className="rounded-3xl bg-ink p-6 text-white shadow-premium">
@@ -89,7 +90,7 @@ export function Hero() {
             <div className="mt-4 space-y-1.5 font-mono text-xs text-on-ink-2">
               <div className="flex justify-between gap-4">
                 <span>status</span>
-                <b className="font-medium text-on-ink">offline · on-d{/* copy column */}evice</b>
+                <b className="font-medium text-on-ink">offline · on-device</b>
               </div>
               <div className="flex justify-between gap-4">
                 <span>network</span>
@@ -131,6 +132,35 @@ export function Hero() {
               <b className="font-medium text-ink-soft">WebRTC · encrypted</b>
             </div>
           </div>
+
+          {/* cloud panel — Cloud & API (coming soon) */}
+          <Link
+            href="/cloud-api"
+            className="block rounded-3xl border-2 border-dashed border-line bg-surface-soft/70 p-6 shadow-card transition-colors hover:border-teal-500/40"
+          >
+            <div className="flex items-center justify-between">
+              <span className="font-mono text-xs uppercase tracking-wider text-teal-600">
+                Cloud & API
+              </span>
+              <Badge variant="outline">Coming Soon</Badge>
+            </div>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <Badge variant="teal">Teams</Badge>
+              <Badge variant="teal">Zoom</Badge>
+              <Badge variant="teal">Meet</Badge>
+              <Badge variant="teal">Slack</Badge>
+            </div>
+            <div className="mt-4 space-y-1.5 font-mono text-xs text-ink-muted">
+              <div className="flex justify-between gap-4">
+                <span>status</span>
+                <b className="font-medium text-ink-soft">in development</b>
+              </div>
+              <div className="flex justify-between gap-4">
+                <span>reach</span>
+                <b className="font-medium text-ink-soft">any live audio source</b>
+              </div>
+            </div>
+          </Link>
         </div>
       </Container>
     </section>
