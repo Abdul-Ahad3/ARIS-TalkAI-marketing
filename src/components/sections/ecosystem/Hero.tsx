@@ -12,7 +12,7 @@ export function Hero() {
             One ecosystem. <span className="text-gradient-teal">Every conversation.</span>
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-ink-soft">
-            Embedded Edition and the TalkAI App are not two separate products. They are two halves of the same idea, built to move with you between the moments that need privacy and the ones that need reach.
+            The Embedded Edition, the TalkAI App and the Cloud + API components are not three separate products. They are three parts of the same whole, built to move with you between the moments that need privacy, reach and collaboration.
           </p>
           <div className="mt-10 flex flex-wrap items-left justify-left gap-4">
             <Button href="/contact" size="lg">Request Demo</Button>

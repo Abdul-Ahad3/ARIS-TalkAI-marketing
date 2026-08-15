@@ -6,7 +6,7 @@ export function SharedFoundation() {
     <SplitFeatureSection 
       className="bg-ink text-white"
       eyebrow="Shared Foundation"
-      title="Two products. One set of principles."
+      title="Three products. One set of principles."
       description=""
       position="bottom"
       visual={

@@ -11,7 +11,7 @@ export function JourneyTimeline() {
           align="left"
           eyebrow="One Day, One Ecosystem"
           title="The same understanding, wherever the day takes you."
-          description="Two products, moving with you between the moments that need privacy and the ones that need reach."
+          description="Three products, moving with you between the moments that need privacy, reach and collaboration."
         />
 
         <div className="text-left justify-items-left mt-16">

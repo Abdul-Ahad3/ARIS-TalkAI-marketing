@@ -15,6 +15,7 @@ export function ComparisonTable() {
                 <th scope="col" className="px-6 py-4 font-mono text-xs uppercase tracking-wider text-ink-muted">Aspect</th>
                 <th scope="col" className="px-6 py-4 font-mono text-xs uppercase tracking-wider text-ink-muted">Embedded Edition</th>
                 <th scope="col" className="px-6 py-4 font-mono text-xs uppercase tracking-wider text-ink-muted">TalkAI App</th>
+                <th scope="col" className="px-6 py-4 font-mono text-xs uppercase tracking-wider text-ink-muted">Cloud & API</th>
               </tr>
             </thead>
             <tbody>
@@ -23,6 +24,7 @@ export function ComparisonTable() {
                   <th scope="row" className="px-6 py-4 font-medium text-ink">{row.label}</th>
                   <td className="px-6 py-4 text-ink-soft">{row.embedded}</td>
                   <td className="px-6 py-4 text-ink-soft">{row.mobile}</td>
+                  <td className="px-6 py-4 text-ink-soft">{row.capi}</td>
                 </tr>
               ))}
             </tbody>
