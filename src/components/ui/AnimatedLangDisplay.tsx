@@ -71,7 +71,7 @@ export function AnimatedLangDisplay() {
 
     const interval = window.setInterval(() => {
       setIndex((current) => (current + 1) % LANGUAGE_PAIRS.length);
-    }, 2500);
+    }, 900);
 
     return () => window.clearInterval(interval);
   }, [reducedMotion]);

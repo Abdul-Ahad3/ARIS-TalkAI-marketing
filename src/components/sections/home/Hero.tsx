@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { AnimatedLangDisplay } from "@/components/ui/AnimatedLangDisplay";
 import { Badge } from "@/components/ui/Badge";
+import { HeroProductWidget } from "./HeroProductWidget";
 
 import { cn } from "@/lib/utils";
 
@@ -79,88 +80,7 @@ export function Hero() {
         {/* visual column — triple panel, stacked, reordered above copy on mobile */}
         <div className="order-first grid gap-4 lg:order-last">
           {/* offline panel — Embedded Edition */}
-          <div className="rounded-3xl bg-ink p-6 text-white shadow-premium">
-            <div className="flex items-center justify-between">
-              <span className="font-mono text-xs uppercase tracking-wider text-cyan-soft">
-                Embedded Edition
-              </span>
-              <Wave />
-            </div>
-            <AnimatedLangDisplay />
-            <div className="mt-4 space-y-1.5 font-mono text-xs text-on-ink-2">
-              <div className="flex justify-between gap-4">
-                <span>status</span>
-                <b className="font-medium text-on-ink">offline · on-device</b>
-              </div>
-              <div className="flex justify-between gap-4">
-                <span>network</span>
-                <b className="font-medium text-on-ink">none required</b>
-              </div>
-              <div className="flex justify-between gap-4">
-                <span>data</span>
-                <b className="font-medium text-on-ink">never leaves device</b>
-              </div>
-            </div>
-          </div>
-
-          {/* online panel — TalkAI App */}
-          <div className="rounded-3xl border border-line bg-surface p-6 shadow-card">
-            <div className="flex items-center justify-between">
-              <span className="font-mono text-xs uppercase tracking-wider text-teal-600">
-                TalkAI App
-              </span>
-              <Badge variant="teal">
-                Live call
-              </Badge>
-            </div>
-            <div className="mt-4 space-y-2.5">
-              <div className="rounded-xl bg-surface-soft p-3 text-sm text-ink-soft">
-                <span className="mb-1 block font-mono text-[0.65rem] uppercase tracking-wider text-ink-muted">
-                  You speak · English
-                </span>
-                Are you free to meet on Thursday?
-              </div>
-              <div className="rounded-xl border border-[#cde9ea] bg-[#e6f4f5] p-3 text-sm text-teal-900">
-                <span className="mb-1 block font-mono text-[0.65rem] uppercase tracking-wider text-teal-700/70">
-                  They hear · French
-                </span>
-                Es-tu libre pour se voir jeudi&nbsp;?
-              </div>
-            </div>
-            <div className="mt-4 flex justify-between font-mono text-xs text-ink-muted">
-              <span>link</span>
-              <b className="font-medium text-ink-soft">WebRTC · encrypted</b>
-            </div>
-          </div>
-
-          {/* cloud panel — Cloud & API (coming soon) */}
-          <Link
-            href="/cloud-api"
-            className="block rounded-3xl border-2 border-dashed border-line bg-surface-soft/70 p-6 shadow-card transition-colors hover:border-teal-500/40"
-          >
-            <div className="flex items-center justify-between">
-              <span className="font-mono text-xs uppercase tracking-wider text-teal-600">
-                Cloud & API
-              </span>
-              <Badge variant="outline">Coming Soon</Badge>
-            </div>
-            <div className="mt-4 flex flex-wrap gap-2">
-              <Badge variant="teal">Teams</Badge>
-              <Badge variant="teal">Zoom</Badge>
-              <Badge variant="teal">Meet</Badge>
-              <Badge variant="teal">Slack</Badge>
-            </div>
-            <div className="mt-4 space-y-1.5 font-mono text-xs text-ink-muted">
-              <div className="flex justify-between gap-4">
-                <span>status</span>
-                <b className="font-medium text-ink-soft">in development</b>
-              </div>
-              <div className="flex justify-between gap-4">
-                <span>reach</span>
-                <b className="font-medium text-ink-soft">any live audio source</b>
-              </div>
-            </div>
-          </Link>
+          <HeroProductWidget />
         </div>
       </Container>
     </section>
